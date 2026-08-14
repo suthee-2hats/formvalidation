@@ -1,0 +1,254 @@
+/* ------------------------------
+   Reset
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------
+   Base
+------------------------------ */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f4f5f7;
+    color: #1f2937;
+}
+
+
+/* ------------------------------
+   Page
+------------------------------ */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 1rem;
+}
+
+
+/* ------------------------------
+   Form Card
+------------------------------ */
+
+.form-card {
+    width: min(100%, 500px);
+
+    padding: 2rem;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
+
+.form-header p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+/* ------------------------------
+   Form Group
+------------------------------ */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+/* ------------------------------
+   Label
+------------------------------ */
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* ------------------------------
+   Inputs
+------------------------------ */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 0.75rem 0.875rem;
+
+    font: inherit;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ------------------------------
+   Focus
+------------------------------ */
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ------------------------------
+   Error message
+------------------------------ */
+
+.form-error {
+    min-height: 1.2rem;
+
+    font-size: 0.85rem;
+
+    color: #dc2626;
+}
+
+
+/* ------------------------------
+   Invalid field
+------------------------------ */
+
+.form-group input.is-invalid,
+.form-group select.is-invalid {
+    border-color: #dc2626;
+}
+
+
+/* ------------------------------
+   Valid field
+------------------------------ */
+
+.form-group input.is-valid,
+.form-group select.is-valid {
+    border-color: #16a34a;
+}
+
+
+/* ------------------------------
+   Checkbox
+------------------------------ */
+
+.form-group--checkbox {
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 0.6rem;
+}
+
+.form-group--checkbox input {
+    width: auto;
+}
+
+
+/* ------------------------------
+   Submit Button
+------------------------------ */
+
+.submit-button {
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+
+    border: none;
+    border-radius: 6px;
+
+    font: inherit;
+    font-weight: 600;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+.submit-button:hover {
+    background: #1d4ed8;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 500px) {
+
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+
+}

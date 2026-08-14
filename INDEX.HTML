@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Validation Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="form-card">
+
+            <header class="form-header">
+                <h1>Create Account</h1>
+                <p>Fill in the details below to create your account.</p>
+            </header>
+
+            <form id="registration-form" novalidate>
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <p
+                        class="form-error"
+                        id="username-error"
+                    ></p>
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <p
+                        class="form-error"
+                        id="email-error"
+                    ></p>
+                </div>
+
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        placeholder="Enter your age"
+                    >
+
+                    <p
+                        class="form-error"
+                        id="age-error"
+                    ></p>
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                    >
+
+                    <p
+                        class="form-error"
+                        id="phone-error"
+                    ></p>
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="new-password"
+                    >
+
+                    <p
+                        class="form-error"
+                        id="password-error"
+                    ></p>
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirmPassword"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                    >
+
+                    <p
+                        class="form-error"
+                        id="confirm-password-error"
+                    ></p>
+                </div>
+
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                    >
+
+                    <p
+                        class="form-error"
+                        id="dob-error"
+                    ></p>
+                </div>
+
+
+                <!-- Country -->
+                <div class="form-group">
+                    <label for="country">Country</label>
+
+                    <select id="country" name="country">
+                        <option value="">Select your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                    </select>
+
+                    <p
+                        class="form-error"
+                        id="country-error"
+                    ></p>
+                </div>
+
+
+                <!-- Terms -->
+                <div class="form-group form-group--checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                    >
+
+                    <label for="terms">
+                        I agree to the terms and conditions.
+                    </label>
+
+                </div>
+
+                <p
+                    class="form-error"
+                    id="terms-error"
+                ></p>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="./script/script.js"></script>
+
+</body>
+</html>
