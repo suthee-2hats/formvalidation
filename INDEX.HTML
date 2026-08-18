@@ -158,19 +158,21 @@
 
                 <!-- Country -->
                 <div class="form-group">
-                    <label for="country">Country</label>
+                    <label for="region">Region</label>
 
-                    <select id="country" name="country">
-                        <option value="">Select your country</option>
-                        <option value="india">India</option>
-                        <option value="usa">United States</option>
-                        <option value="uk">United Kingdom</option>
-                        <option value="canada">Canada</option>
+                    <select id="region" name="region">
+                        <option value="">Select your region</option>
+                        <option value="asia-pacific">Asia-Pacific</option>
+                        <option value="europe">Europe</option>
+                        <option value="north-america">North America</option>
+                        <option value="south-america">South America</option>
+                        <option value="africa">Africa</option>
+                        <option value="middle-east">Middle East</option>
+                        <option value="oceania">Oceania</option>
                     </select>
-
                     <p
                         class="form-error"
-                        id="country-error"
+                        id="region-error"
                     ></p>
                 </div>
 
@@ -198,7 +200,7 @@
 
                 <!-- Submit -->
                 <button
-                    type="submit"
+                   
                     class="submit-button"
                 >
                     Create Account
@@ -211,6 +213,7 @@
     </main>
 
     <script type="module" src="./script/script.js"></script>
+    <script type="module" src="./script/ultimateValidation.js"></script>
 
 </body>
 </html>
