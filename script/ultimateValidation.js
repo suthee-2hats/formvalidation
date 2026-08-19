@@ -49,7 +49,7 @@ function ultimateValidation(){
         return;
     }
 
-    
+    console.log("checking vercel");
 
     alert(
         `Registration successful!
