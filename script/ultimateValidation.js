@@ -1,4 +1,4 @@
-import {userName,usernameValidation} from "./script.js";
+/*import {userName,usernameValidation} from "./script.js";
 import {email,emailValidation} from "./script.js";
 import {age,ageValidation} from "./script.js";
 import {password,passwordValidation}  from "./script.js";
@@ -63,3 +63,5 @@ Region: ${testregion.value}`
 
 
 }
+
+*/

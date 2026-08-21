@@ -1,4 +1,6 @@
-console.log("js is working !!!");
+
+
+/*console.log("js is working !!!");
 
 const userName = document.querySelector('#username');
 
@@ -245,3 +247,5 @@ function showErrorInInput(displayError,msg){
   
 
 } 
+
+*/
