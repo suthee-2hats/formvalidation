@@ -77,7 +77,7 @@ userName.addEventListener("blur", () => {
 
 
 
-//functions of form validations 
+//functions of form validations ---------------------------------------added to plugin 
 export function usernameValidation(userName){
     const value = userName;
     const errorDisplay = document.querySelector("#username-error");
@@ -103,7 +103,7 @@ export function usernameValidation(userName){
     
 }
 
-export function emailValidation(email){
+export function emailValidation(email){---------------------------------------added to plugin 
     
     const value = email;
     const errorDisplay = document.querySelector("#email-error");
@@ -123,7 +123,7 @@ export function emailValidation(email){
 
 }
 
-export function ageValidation(age){
+export function ageValidation(age){---------------------------completed 
     const value = age;
     const errorDisplay = document.querySelector("#age-error");
     if(value.value === ""){
@@ -138,7 +138,7 @@ export function ageValidation(age){
 
 //function for passwords 
 
-export function passwordValidation(password){
+export function passwordValidation(password){---------------------------------completed
     const value = password.value;
     const  errorDisplay = document.querySelector("#password-error");
 
@@ -178,7 +178,7 @@ export function conformPasswordValidation(conformPassword,password){
 
 }
 
-export function dobValidation(dob){
+export function dobValidation(dob){-------------------------------------completed 
     const value = dob.value;
     const  errorDisplay = document.querySelector("#dob-error");
  

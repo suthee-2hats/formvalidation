@@ -2,6 +2,8 @@ export class formvalidation {
 
     constructor(container,rules = {}) {
         this.container = document.querySelector(container);
+        this.rules = rules;
+        
 
         console.log("Selected element:", this.container);
     }
@@ -15,11 +17,18 @@ export class formvalidation {
 
         console.log("Form was found:", this.container);
 
+       
+
+
         this.container.addEventListener("blur", (event) => {
 
             console.log("Blurred element:", event.target);
         
             console.log("Input type:", event.target.type);
+            const field = event.target;
+
+            const fieldRules =
+            this.rules[`#${field.id}`];
 
             if(event.target.type === "text"){
                 this.textValidation(event.target);
@@ -36,6 +45,12 @@ export class formvalidation {
             }
             if(event.target.type === "number"){
                 this.ageValidation(event.target);
+            }
+            if (this.fieldRules?.match) {
+                this.confirmPasswordValidation(
+                    field,
+                    fieldRules.match
+                );
             }
 
         
@@ -158,6 +173,29 @@ export class formvalidation {
         this.showErrorInInput(errorDisplay,"");
         return true;
     
+    }
+
+    confirmPasswordValidation(field, matchSelector) {
+
+        const originalField =
+            this.container.querySelector(matchSelector);
+    
+        const errorDisplay =
+            field.nextElementSibling;
+    
+        if (field.value !== originalField.value) {
+    
+            this.showErrorInInput(
+                errorDisplay,
+                "Passwords should be the same!"
+            );
+    
+            return false;
+        }
+    
+        this.showErrorInInput(errorDisplay, "");
+    
+        return true;
     }
 
 

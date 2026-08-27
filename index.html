@@ -218,7 +218,9 @@
     
     <script type="module">
          import { formvalidation } from "./script/plugin.js";
-       const validaion =  new formvalidation("#registration-form");
+       const validaion =  new formvalidation("#registration-form",{"#confirm-password": {
+                                                            match: "#password"
+                                                             }});
        validaion.init();
        
     </script>
