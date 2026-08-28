@@ -5,7 +5,7 @@ export class formvalidation {
         this.rules = rules;
         
 
-        console.log("Selected element:", this.container);
+       
     }
 
     init() {
@@ -22,9 +22,7 @@ export class formvalidation {
 
         this.container.addEventListener("blur", (event) => {
 
-            console.log("Blurred element:", event.target);
-        
-            console.log("Input type:", event.target.type);
+            
             const field = event.target;
 
             const fieldRules =
@@ -46,7 +44,7 @@ export class formvalidation {
             if(event.target.type === "number"){
                 this.ageValidation(event.target);
             }
-            if (this.fieldRules?.match) {
+            if (fieldRules?.match) {
                 this.confirmPasswordValidation(
                     field,
                     fieldRules.match
@@ -70,7 +68,7 @@ export class formvalidation {
             return false;
     
         }
-        if(value.validity.patternMissmatch)
+        if(value.validity.patternMismatch)
         {
            
             this.showErrorInInput(errorDisplay,"enter a valid username !!");
@@ -87,7 +85,7 @@ export class formvalidation {
     
         const value = email;
         const errorDisplay = email.nextElementSibling;
-        if(value.validity.valueMissing){
+        if(value.validity.valueMissing){In
             this.showErrorInInput(errorDisplay,"enter value for email");
             return false;
         }
@@ -176,6 +174,8 @@ export class formvalidation {
     }
 
     confirmPasswordValidation(field, matchSelector) {
+
+        console.log("function confirm password is called !!");
 
         const originalField =
             this.container.querySelector(matchSelector);
