@@ -56,7 +56,16 @@ export class formvalidation {
                     fieldRules.max,
                     fieldRules.min
                  )
-                    
+                 
+                 
+            }
+            if(fieldRules?.limit){
+                console.log(fieldRules);
+                this.phoneNumbervalidation(field,fieldRules.limit)
+            }
+            if(event.target.tagName == "SELECT"){
+                console.log(event.target);
+                this.dropDownValidation(event.target);
             }
             
         }, true);
@@ -138,7 +147,7 @@ export class formvalidation {
         const value = dob.value;
         const  errorDisplay = dob.nextElementSibling;
      
-    
+        phone
         if(value === ""){
            
             this.showErrorInInput(errorDisplay,"enter dob");
@@ -211,6 +220,34 @@ export class formvalidation {
     
         return true;
     }
+
+   dropDownValidation(dropdown){
+        const value = dropdown;
+        const errorDisplay =  dropdown.nextElementSibling;
+        if(value.value === ""){
+            
+            this.showErrorInInput(errorDisplay,"select the region");
+            return false;
+        }
+        this.showErrorInInput(errorDisplay,"");
+        return true;
+    
+    }
+
+    phoneNumbervalidation(Number,limit){
+        const value = Number;
+        const errorDisplay = Number.nextElementSibling;
+        if(value.value.length != limit){
+            
+            this.showErrorInInput(errorDisplay,"number must be "+limit+" numbers");
+            return false;
+        }
+        this.showErrorInInput(errorDisplay,"");
+        return true;
+    
+    }
+
+    
 
 
 

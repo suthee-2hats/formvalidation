@@ -225,15 +225,20 @@
                             },
 
                             "confirm-password": {
-                                selecor : "#confirm-password",
+                                selector : "#confirm-password",
                                 match : "#password"
                             },
                             
                             age: {
-                                selecor: "#age",
+                                selector: "#age",
                                 max :60,
                                 min :18
-                            }                                 
+                            },
+
+                            phone: {
+                                selector : "#phone",
+                                limit : 10
+                            }
                                                             
                                                             });
        validaion.init();
