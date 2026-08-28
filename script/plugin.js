@@ -25,8 +25,7 @@ export class formvalidation {
             
             const field = event.target;
 
-            const fieldRules =
-            this.rules[`#${field.id}`];
+            const fieldRules =this.rules[field.id];
 
             if(event.target.type === "text"){
                 this.textValidation(event.target);
@@ -50,8 +49,16 @@ export class formvalidation {
                     fieldRules.match
                 );
             }
-
-        
+            if (fieldRules?.max) {
+                console.log(fieldRules);
+                this.ageValidation(
+                    field,
+                    fieldRules.max,
+                    fieldRules.min
+                 )
+                    
+            }
+            
         }, true);
     }
 
@@ -160,12 +167,16 @@ export class formvalidation {
         return true;
     
     }
-    ageValidation(age){
-        const value = age;
+    ageValidation(age,max,min){
+        const value = age.value;
         const errorDisplay = age.nextElementSibling;
-        if(value.value === ""){
+        if(value === ""){
          
             this.showErrorInInput(errorDisplay,"enter age");
+            return false;
+        }
+        if(value >max || value<min){
+            this.showErrorInInput(errorDisplay,"age range between "+min+" to "+max);
             return false;
         }
         this.showErrorInInput(errorDisplay,"");
@@ -174,6 +185,9 @@ export class formvalidation {
     }
 
     confirmPasswordValidation(field, matchSelector) {
+        console.log("field:", field);
+        console.log("field id:", field.id);
+        console.log("matchSelector:", matchSelector);
 
         console.log("function confirm password is called !!");
 

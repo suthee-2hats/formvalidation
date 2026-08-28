@@ -218,9 +218,24 @@
     
     <script type="module">
          import { formvalidation } from "./script/plugin.js";
-       const validaion =  new formvalidation("#registration-form",{"#confirm-password": {
-                                                            match: "#password"
-                                                             }});
+       const validaion =  new formvalidation("#registration-form",
+                        {
+                            password :{
+                                selector : "#password"
+                            },
+
+                            "confirm-password": {
+                                selecor : "#confirm-password",
+                                match : "#password"
+                            },
+                            
+                            age: {
+                                selecor: "#age",
+                                max :60,
+                                min :18
+                            }                                 
+                                                            
+                                                            });
        validaion.init();
        
     </script>
